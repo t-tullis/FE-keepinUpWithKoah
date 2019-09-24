@@ -26,21 +26,30 @@ function CreatePost(props){
 
         console.log(createPost)
        
+        if(props.isLoggedIn === true){
+        
+            localStorage.getItem('token')
+            
         axios
-        .post(`http://localhost:4500/api/posts`, content)
+        .post(`http://localhost:4500/api/posts`, content, {
+            Headers:{
+            'Authorization': localStorage.getItem('token'),
+          }
+        })
         .then(res => {
-            console.log(res)
-            localStorage.getItem('token');
-        })
-        .catch(err => {
-        console.log(err)
-        })
+                console.log(res)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+        }
     }
     
     const { title, body , category} = createPost.content
 
     return(
         <div>
+        {console.log(props.isLoggedIn)}
         <form method='POST' onSubmit={e => submitPost(e, createPost.content)}>
           <input
                 type='text'

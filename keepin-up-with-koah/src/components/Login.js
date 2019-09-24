@@ -9,8 +9,10 @@ function Login() {
             email:  '',
             password: ''
         },
-        isLoggedIn: false
     })
+    
+    const [isLoggedIn, setLoggedIn] = useState(false)
+
 
     const handleInputChange = e => {
         e.preventDefault();
@@ -33,9 +35,9 @@ function Login() {
         .then(res => {
             console.log(res)
             if(res.status === 200){
+            setLoggedIn(true)
             localStorage.setItem('token', res.data.token)
-            loginCreds.isLoggedIn = true;
-            console.log(loginCreds.isLoggedIn)
+            console.log(isLoggedIn)
             }
         })
         .catch(err => {
@@ -68,7 +70,7 @@ function Login() {
              <button type="submit">Login</button>
         </form>
         <Users />
-        <CreatePost isLoggedIn={loginCreds.isLoggedIn}/>
+        <CreatePost isLoggedIn={isLoggedIn}/>
     </div>
     )
 }
