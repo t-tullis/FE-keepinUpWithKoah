@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Users from './Users.js'
+import CreatePost from './CreatePost.js'
 import axios from 'axios'
 
 function Login() {
@@ -67,6 +68,7 @@ function Login() {
              <button type="submit">Login</button>
         </form>
         <Users />
+        <CreatePost isLoggedIn={loginCreds.isLoggedIn}/>
     </div>
     )
 }
