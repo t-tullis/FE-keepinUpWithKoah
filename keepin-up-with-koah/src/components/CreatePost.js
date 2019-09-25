@@ -22,17 +22,12 @@ function CreatePost(props){
 
     const submitPost = (e, content) => {
         e.preventDefault();
-        e.persist();
 
         console.log(createPost)
-       
-        if(props.isLoggedIn === true){
-        
-            localStorage.getItem('token')
-            
+        if(localStorage.getItem('loggedIn') === 'true'){    
         axios
         .post(`http://localhost:4500/api/posts`, content, {
-            Headers:{
+            headers: {
             'Authorization': localStorage.getItem('token'),
           }
         })
@@ -49,7 +44,7 @@ function CreatePost(props){
 
     return(
         <div>
-        {console.log(props.isLoggedIn)}
+        {console.log(localStorage.getItem('loggedIn'))}
         <form method='POST' onSubmit={e => submitPost(e, createPost.content)}>
           <input
                 type='text'

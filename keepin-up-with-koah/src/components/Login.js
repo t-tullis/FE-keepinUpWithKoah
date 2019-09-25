@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import Users from './Users.js'
 import CreatePost from './CreatePost.js'
+import Logout from './Logout.js'
 import axios from 'axios'
 
-function Login() {
+function Login(props) {
     const [loginCreds, setLoginCreds] = useState({
         creds:{
             email:  '',
@@ -11,8 +12,6 @@ function Login() {
         },
     })
     
-    const [isLoggedIn, setLoggedIn] = useState(false)
-
 
     const handleInputChange = e => {
         e.preventDefault();
@@ -35,9 +34,9 @@ function Login() {
         .then(res => {
             console.log(res)
             if(res.status === 200){
-            setLoggedIn(true)
             localStorage.setItem('token', res.data.token)
-            console.log(isLoggedIn)
+            localStorage.setItem('loggedIn', 'true' )
+            props.history.push('/Users')
             }
         })
         .catch(err => {
@@ -69,8 +68,6 @@ function Login() {
              />
              <button type="submit">Login</button>
         </form>
-        <Users />
-        <CreatePost isLoggedIn={isLoggedIn}/>
     </div>
     )
 }
