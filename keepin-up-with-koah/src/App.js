@@ -6,6 +6,7 @@ import './App.css';
 import Users from './components/Users.js'
 import Logout from './components/Logout.js'
 import Homepage from './components/Homepage.js'
+import BlogPost from './components/BlogPost.js'
 
 function App() {
   if(localStorage.getItem('loggedIn') === 'true'){
@@ -37,7 +38,7 @@ function App() {
       <Route 
         exact
         path='/'
-        render = {props => <Homepage /> }
+        render = {props => <Homepage {...props} /> }
       />
 
 
@@ -49,8 +50,15 @@ function App() {
     <Route 
       exact
       path='/'
-      render = {props => <Homepage /> }
+      render = {props => <Homepage {...props}/> }
       />
+    
+   {/* Dynamic param route to get blog post by id */}
+    <Route
+      exact 
+      path='/post/:id'
+      render = {props => <BlogPost {...props} />}
+    />
 
     <Route
     exact 
