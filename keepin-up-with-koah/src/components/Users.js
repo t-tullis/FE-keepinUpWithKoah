@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import Logout from './Logout.js'
 import axios from 'axios'
 
 function Users(props) {

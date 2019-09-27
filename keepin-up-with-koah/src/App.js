@@ -16,10 +16,10 @@ function App() {
        <nav>
          <NavLink exact to='/Users'>Users</NavLink>
          <NavLink exact to='/Createpost'>Create Post</NavLink>
-         <NavLink exact to='/'>Home</NavLink>
+         <NavLink exact to='/'>View All Posts</NavLink>
          <Route
             render = {props => <Logout {...props} /> }
-            />
+          />
         </nav>
       </div>
 
@@ -41,6 +41,11 @@ function App() {
         render = {props => <Homepage {...props} /> }
       />
 
+      <Route
+        exact 
+        path='/post/:id'
+        render = {props => <BlogPost {...props} />}
+      />
 
     </div>
   );

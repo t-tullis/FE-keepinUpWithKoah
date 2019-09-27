@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {Route, Link} from 'react-router-dom'
-import BlogPost from './BlogPost.js'
+import '../stylesheets/blogPosts.scss'
 import axios from 'axios'
 
 function BlogPosts() {
@@ -19,10 +19,10 @@ function BlogPosts() {
     }, [])
     
     return(
-        <div>
+        <div className='posts-container'>
             {blogPosts.map(post => {
                 return(
-                    <div key={post._id}> 
+                    <div className='post-card' key={post._id}> 
                         <Link to={`/post/${post._id}`}>{post.title}</Link>
                         <h5>{post.category}</h5>
                         <p>{post.body}</p>

@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-import Users from './Users.js'
-import CreatePost from './CreatePost.js'
-import Logout from './Logout.js'
 import axios from 'axios'
 
 function Login(props) {
