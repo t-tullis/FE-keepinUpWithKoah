@@ -6,7 +6,8 @@ function CreatePost(props){
         content:{
             title:  '',
             body: '',
-            category: ''
+            category: '',
+            previewImg: ''
         }
     })
 
@@ -40,7 +41,7 @@ function CreatePost(props){
         }
     }
     
-    const { title, body , category} = createPost.content
+    const { title, body , category, previewImg} = createPost.content
 
     return(
         <div>
@@ -55,6 +56,13 @@ function CreatePost(props){
             />
             <input
                 type='text'
+                value={previewImg}
+                onChange={handleInputChange}
+                name='previewImg'
+                placeholder='Image link here'
+            />
+            <input
+                type='text'
                 value={category}
                 onChange={handleInputChange}
                 name='category'
@@ -64,7 +72,7 @@ function CreatePost(props){
                 type='text'
                 value={body}
                 onChange={handleInputChange}
-                placeholder='body'
+                placeholder='Insert Description'
                 name='body'
              />
              <button type="submit">Submit</button>

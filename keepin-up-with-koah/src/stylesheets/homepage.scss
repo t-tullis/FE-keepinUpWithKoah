@@ -48,29 +48,53 @@ table {
 }
 
 .koah-pic{
-    width: 100%;
+    width: 50%;
     height: 100vh;
-    position: relative;
-    opacity: .8;
-    filter: grayscale(100%)
+    opacity: .7;
+    // filter: grayscale(100%);
+    left: 0;
+    position: fixed;
   }
   
-  .koah-header h1{
-    position: absolute;
+  .koah-header{
+    h1{
+    position: fixed;
     z-index: 1;
     left: 0; 
     right: 0; 
-    top: 40%;
+    top: 5%;
     font-family: 'Fredoka One';
     transform: rotate(-12.55deg);
-    border: 4px solid black;
+    border: 4px solid #0B132B;
     border-radius: 5px;
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 1px;
     text-align: center;
     margin-left: 10px;
-    width: 550px; 
+    width: 100px; 
     animation: seesaw 4s infinite;
+    color: #6FFFE9;
+    }
+    p{
+      position: fixed;
+      z-index: 1;
+      left: 0; 
+      right: 0; 
+      top: 75%;
+      margin-left: 3%;
+      font-family: 'Montserrat';
+      font-size: 4vh;
+      line-height: 4vh;
+      font-weight: 700;
+      max-width: 34%;
+      color: #0B132B;
+
+      .name{
+        color: #6FFFE9;
+        font-family: 'Fredoka One';
+        letter-spacing: 2px;
+      }
+    }
   }
 
 @keyframes seesaw {
