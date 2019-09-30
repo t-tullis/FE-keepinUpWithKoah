@@ -1,25 +1,43 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Login from './components/Login.js'
 import CreatePost from './components/CreatePost.js'
 import {Route, NavLink} from 'react-router-dom'
-import './App.css';
+import './App.scss';
 import Users from './components/Users.js'
 import Logout from './components/Logout.js'
 import Homepage from './components/Homepage.js'
 import BlogPost from './components/BlogPost.js'
 
 function App() {
-  if(localStorage.getItem('loggedIn') === 'true'){
-  return (
+  
+  const [isToggleOpen, setIsToggleOpen] = useState(true)
+
+  const toggleMenu = (e) => {
+    e.preventDefault();
+    if(!isToggleOpen){
+      setIsToggleOpen(true)
+    } else {
+        setIsToggleOpen(false)
+    }
+}
+  
+  if(localStorage.getItem('loggedIn') === 'true'){  
+    return (
     <div className="App">
-     <div className='navigation'>
-       <nav>
+     <div className='navigation-container'>
+      <i onClick={toggleMenu} className="fas fa-door-open fa-2x"></i>
+       <nav className={isToggleOpen ? "navigation" : "removeNav" }>
+         <i onClick={toggleMenu} className="fas fa-door-closed fa-2x"></i>
          <NavLink exact to='/Users'>Users</NavLink>
          <NavLink exact to='/Createpost'>Create Post</NavLink>
          <NavLink exact to='/'>View All Posts</NavLink>
          <Route
             render = {props => <Logout {...props} /> }
           />
+          <div className='social-media'>
+          <p>Follow Koah's Journey</p>
+          <i className="fab fa-instagram fa-2x"></i>
+          </div>
         </nav>
       </div>
 

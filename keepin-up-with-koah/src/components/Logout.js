@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import '../App.scss'
 
 function Logout(props) {
     const logout = (e) => {
@@ -8,8 +10,8 @@ function Logout(props) {
     props.history.push('/')
     }
     return(
-        <div>
-            <button onClick={logout}>Logout</button>
+        <div className='logOut' >
+            <Link to='' onClick={logout}>Logout</Link>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import '../stylesheets/Login.scss'
 
 function Login(props) {
     const [loginCreds, setLoginCreds] = useState({
@@ -43,13 +44,15 @@ function Login(props) {
     
     const { email, password } = loginCreds.creds
     return(
-    <div>
+    <div className='login'>
         {console.log(loginCreds)}
         {/* {console.log(loginCreds.email)}
         {console.log(loginCreds.password)} */}
-      <h1> Login component</h1>
-      <form method='POST' onSubmit={e => signIn(e, loginCreds.creds)}>
+      <div class='login-bg'>
+        <h1> Admin Login</h1>
+        <form className='login-form' method='POST' onSubmit={e => signIn(e, loginCreds.creds)}>
           <input
+            className='email'
             type='text'
             value={email}
             onChange={handleInputChange}
@@ -57,14 +60,16 @@ function Login(props) {
             placeholder='email'
              />
             <input
+                className='password'
                 type='text'
                 value={password}
                 onChange={handleInputChange}
                 placeholder='password'
                 name='password'
              />
-             <button type="submit">Login</button>
+             <button className='login-button' type="submit">Login</button>
         </form>
+        </div>
     </div>
     )
 }

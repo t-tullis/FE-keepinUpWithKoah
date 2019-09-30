@@ -1,0 +1,219 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+.fa-door-open{
+  position: fixed;
+  right: 10px;
+  top: 1rem;
+  z-index: 1;
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.removeNav {
+  display: flex;
+  flex-direction: column;
+  background-color: #0B132B;
+  position: fixed;
+  right: 0;
+  height: 100%;
+  z-index: 1;
+  width: 320px;
+  animation: slideOut 2s forwards;
+  
+  
+
+  .fa-door-closed{
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: .5rem;
+    align-self: flex-end;
+
+    &:hover{
+      color: #6FFFE9;
+      cursor: pointer;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #5BC0BE;
+    font-family: 'Montserrat' ,sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-bottom: 1px solid white;
+
+  }
+      .logOut{
+        padding: 20px;
+        
+        a {
+          border-bottom: none;
+        }
+      }
+
+  .active{
+    color: white;
+  }
+
+  .social-media{
+    margin-top: 1rem;
+    padding: 20px;
+    font-family: 'Montserrat' ,sans-serif;
+    background-color: #3A506B;
+    text-align: left;
+  }
+  .fa-instagram{
+    color: white;
+    &:hover{
+      color: #6FFFE9;
+      cursor: pointer;
+    }
+  }
+  p{
+    margin-bottom: 10px;
+    color: white;
+  }
+}
+
+.navigation{
+  display: flex;
+  flex-direction: column;
+  background-color: #0B132B;
+  position: fixed;
+  right: 0;
+  height: 100%;
+  z-index: 1;
+  width: 320px;
+  animation: slideIn 2s forwards;
+  
+
+  .fa-door-closed{
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: .5rem;
+    align-self: flex-end;
+
+    &:hover{
+      color: #6FFFE9;
+      cursor: pointer;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #5BC0BE;
+    font-family: 'Montserrat' ,sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-bottom: 1px solid white;
+
+  }
+      .logOut{
+        padding: 20px;
+        
+        a {
+          border-bottom: none;
+        }
+      }
+
+  .active{
+    color: white;
+  }
+
+  .social-media{
+    margin-top: 1rem;
+    padding: 20px;
+    font-family: 'Montserrat' ,sans-serif;
+    background-color: #3A506B;
+    text-align: left;
+  }
+  .fa-instagram{
+    color: white;
+    &:hover{
+      color: #6FFFE9;
+      cursor: pointer;
+    }
+  }
+  p{
+    margin-bottom: 10px;
+    color: white;
+  }
+}
+
+@keyframes slideIn {
+  0%{
+    transform: translateX(1100px); 
+}
+100% { 
+  transform: translateX(0px); 
+  }
+} 
+
+
+@keyframes slideOut {
+  0%{
+    transform: translateX(0px); 
+}
+100% { 
+  transform: translateX(1100px); 
+  }
+} 
