@@ -14,7 +14,8 @@ function BlogPost(props) {
         This holds all matching params where the key is the name we specified when 
         creating the route and the value is the actual value in the URL.
         */
-        const { match: { params } } = props;
+        const { 
+            match: { params } } = props;
 
         axios
         .get(`http://localhost:4500/api/post/${params.id}`)

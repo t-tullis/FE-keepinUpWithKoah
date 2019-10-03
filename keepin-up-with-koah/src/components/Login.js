@@ -61,7 +61,7 @@ function Login(props) {
              />
             <input
                 className='password'
-                type='text'
+                type='password'
                 value={password}
                 onChange={handleInputChange}
                 placeholder='password'

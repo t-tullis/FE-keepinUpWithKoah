@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import '../stylesheets/createPost.scss'
 
 function CreatePost(props){
     const [createPost, setPostContent] = useState({
