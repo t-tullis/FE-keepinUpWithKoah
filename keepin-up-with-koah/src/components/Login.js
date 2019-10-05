@@ -34,7 +34,7 @@ function Login(props) {
             if(res.status === 200){
             localStorage.setItem('token', res.data.token)
             localStorage.setItem('loggedIn', 'true' )
-            props.history.push('/Users')
+            props.history.push('/')
             }
         })
         .catch(err => {
@@ -59,6 +59,7 @@ function Login(props) {
             name='email'
             placeholder='email'
              />
+
             <input
                 className='password'
                 type='password'
@@ -67,6 +68,7 @@ function Login(props) {
                 placeholder='password'
                 name='password'
              />
+
              <button className='login-button' type="submit">Login</button>
         </form>
         </div>

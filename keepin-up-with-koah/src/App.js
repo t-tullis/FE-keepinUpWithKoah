@@ -28,7 +28,6 @@ function App() {
       <i onClick={toggleMenu} className="fas fa-door-open fa-2x"></i>
        <nav className={isToggleOpen ? "navigation" : "removeNav" }>
          <i onClick={toggleMenu} className="fas fa-door-closed fa-2x"></i>
-         <NavLink exact to='/Users'>Users</NavLink>
          <NavLink exact to='/Createpost'>Create Post</NavLink>
          <NavLink exact to='/'>View All Posts</NavLink>
          <Route
@@ -36,7 +35,7 @@ function App() {
           />
           <div className='social-media'>
           <p>Follow Koah's Journey</p>
-          <i className="fab fa-instagram fa-2x"></i>
+          <a className='insta-link' target="_blank" href='https://www.instagram.com/keepinupwithkoah/'><i className="fab fa-instagram fa-2x"></i></a>
           </div>
         </nav>
       </div>
@@ -45,12 +44,6 @@ function App() {
       exact 
       path='/CreatePost'
       render = {props => <CreatePost {...props} />}
-      />
-
-      <Route
-        exact 
-        path='/Users'
-        render = {props => <Users {...props} />}
       />
 
       <Route 

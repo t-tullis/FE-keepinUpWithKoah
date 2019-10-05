@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {Route, Link} from 'react-router-dom'
-import '../stylesheets/blogPosts.scss'
+import '../stylesheets/blogPost.scss'
 import axios from 'axios'
 
 function BlogPost(props) {
@@ -32,11 +32,12 @@ function BlogPost(props) {
 
 
     return(
-        <div>  
+        <div className='blog-post'>  
             {!localStorage.getItem('loggedIn') && <Link to={'/'}>Home</Link>}
             <h1>{blogPost.title}</h1>
             <h3>{date}</h3>
-            <h3>{blogPost.category}</h3>
+            <h4>{blogPost.category}</h4>
+            <img className='post-image1' src={blogPost.postImage1} />
             <p>{blogPost.body}</p>
         </div>
     )

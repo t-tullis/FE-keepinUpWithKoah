@@ -1,0 +1,73 @@
+.create-post-container{
+    width: 700px;
+    margin: 0 auto;
+    padding-top: .5rem;
+    animation: fadeIn 2s forwards;
+
+    .create-post-bg{
+            background: #0B132B;
+            width: 700px;
+            margin: 6rem auto;
+            padding: 60px;
+            border-radius: 5px;
+            opacity: .7;
+    
+            &:hover{
+                opacity: 1;
+            }
+
+            
+            h1{
+                text-align: center;
+                margin-bottom: 1.5rem;
+                font-family: 'Montserrat';
+                font-size: 3rem;
+                color: white;
+                font-weight: 700;
+            }
+            
+            .create-post{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                textarea{
+                    height: 250px;
+                }
+                
+                button{
+                    margin: 1rem 0;
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 2px solid #6FFFE9;
+                    font-family: 'Montserrat';
+                    font-size: 1rem;
+                    width: 400px;
+
+                    &:hover{
+                        cursor: pointer;
+                        background-color: #6FFFE9;
+                    }
+                }
+
+                .post-form{
+                    width: 100%;
+                    margin: 1rem 0;
+                    padding: 10px;
+                    border-radius: 5px;
+                    border: 2px solid #6FFFE9;
+                    font-family: 'Montserrat';
+                    font-size: .8rem;
+                }
+            }
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%
+    }
+}
