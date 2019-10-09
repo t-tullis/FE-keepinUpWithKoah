@@ -33,7 +33,7 @@ function BlogPost(props) {
 
     return(
         <div className='blog-post'>  
-            {!localStorage.getItem('loggedIn') && <Link to={'/'}>Home</Link>}
+            {!localStorage.getItem('loggedIn') && <Link className='home' to={'/'}>Home</Link>}
             <h1>{blogPost.title}</h1>
             <h3>{date}</h3>
             <h4>{blogPost.category}</h4>

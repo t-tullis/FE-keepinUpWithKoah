@@ -33,10 +33,10 @@ function App() {
          <Route
             render = {props => <Logout {...props} /> }
           />
-          <div className='social-media'>
+          {/* <div className='social-media'>
           <p>Follow Koah's Journey</p>
           <a className='insta-link' target="_blank" href='https://www.instagram.com/keepinupwithkoah/'><i className="fab fa-instagram fa-2x"></i></a>
-          </div>
+          </div> */}
         </nav>
       </div>
 
