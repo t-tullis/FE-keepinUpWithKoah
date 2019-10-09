@@ -56,9 +56,11 @@ table {
   right: 10px;
   top: 1rem;
   z-index: 1;
+  color: #1C2541;
 
   &:hover{
     cursor: pointer;
+    color: #5BC0BE;
   }
 }
 
