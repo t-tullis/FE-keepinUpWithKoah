@@ -44,6 +44,24 @@
         border-radius: 5px;
         margin: 2rem;
     }
+
+    .home{
+        text-decoration: none;
+        font-family: 'Montserrat';
+        font-size: 1rem;
+        border: 1px solid #0B132B;
+        padding: 5px 20px;
+        border-radius: 15px;
+        background: #0B132B;
+        color: white;
+        opacity: .8;
+
+        &:hover{
+            background: white;
+            color: #0B132B;
+            opacity: 1;
+        }
+    }
 }
 
 @keyframes fadeIn{

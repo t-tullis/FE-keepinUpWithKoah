@@ -18,7 +18,7 @@ function BlogPost(props) {
             match: { params } } = props;
 
         axios
-        .get(`http://localhost:4500/api/post/${params.id}`)
+        .get(`http://localhost:5000/api/post/${params.id}`)
         .then(res => {
             setBlogPost(res.data)
             console.log(res.data)

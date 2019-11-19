@@ -9,7 +9,7 @@ function BlogPosts() {
     
     useEffect(() => {
         axios
-        .get('http://localhost:4500/api/posts')
+        .get('http://localhost:5000/api/posts')
         .then(res => {
             setBlogPosts(res.data)
             console.log(res.data)
