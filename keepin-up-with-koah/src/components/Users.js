@@ -8,7 +8,7 @@ function Users(props) {
 
     useEffect(() => {
         axios
-        .get('http://localhost:4500/api/users', {
+        .get('http://localhost:5000/api/users', {
             headers: {
                 Authorization: localStorage.getItem("token")
                 }

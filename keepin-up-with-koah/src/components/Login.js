@@ -28,7 +28,7 @@ function Login(props) {
         console.log(loginCreds)
        
         axios
-        .post(`http://localhost:4500/api/user/login`, creds)
+        .post(`http://localhost:5000/api/user/login`, creds)
         .then(res => {
             console.log(res)
             if(res.status === 200){
